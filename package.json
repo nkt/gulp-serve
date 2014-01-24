@@ -1,0 +1,23 @@
+{
+  "name": "gulp-serve",
+  "version": "1.0.0",
+  "description": "Serve your assets",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hell0w0rd/gulp-serve.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "serve",
+    "connect"
+  ],
+  "author": "Gusakov Nikita",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "gulp-util": "~2.2.12",
+    "connect": "~2.12.0"
+  }
+}
