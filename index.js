@@ -4,22 +4,27 @@ var http = require('http');
 
 module.exports = function (config) {
   config || (config = {});
-  var app = connect();
-  if (!config instanceof Object) {
-    config = {root: config};
-  }
-  if (config.root) {
-    if (config.root instanceof String) {
+  return function () {
+    var app = connect();
+    if (typeof config !== 'object') {
+      config = {root: config};
+    }
+    if (!config.root) {
+      config.root = ['.'];
+    }
+    if (typeof config.root === 'string') {
       config.root = [config.root];
     }
-    config.static.forEach(function (path) {
+
+    config.root.forEach(function (path) {
       app.use(connect.static(path));
     });
-  }
-  if (!config.port) {
-    config.port = 3000;
-  }
-  http.createServer(app).listen(config.port, function () {
-    util.log('Server started on ' + config.port + 'port');
-  });
+    if (!config.port) {
+      config.port = 3000;
+    }
+
+    http.createServer(app).listen(config.port, function () {
+      util.log(util.colors.bgGreen('Server started on ' + config.port + ' port'));
+    });
+  };
 };
