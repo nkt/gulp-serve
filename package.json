@@ -14,10 +14,25 @@
     "connect"
   ],
   "author": "Gusakov Nikita",
+  "contributors": [
+    {
+      "name": "Ilya Lakhin",
+      "email": "eliah.lakhin@gmail.com",
+      "url": "http://lakhin.com/"
+    }
+  ],
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
     "gulp-util": "~2.2.12",
     "connect": "~2.12.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "should": "~3.1.0",
+    "connect-livereload": "~0.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

@@ -16,6 +16,16 @@ module.exports = function (config) {
       config.root = [config.root];
     }
 
+    if (!config.middlewares) {
+      config.middlewares = [];
+    }
+    if (config.middleware) {
+      config.middlewares.push(config.middleware);
+    }
+    config.middlewares.forEach(function(middleware) {
+      app.use(middleware);
+    });
+
     config.root.forEach(function (path) {
       app.use(connect.static(path));
     });
