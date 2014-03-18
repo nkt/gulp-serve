@@ -6,8 +6,12 @@ module.exports = function (config) {
   config || (config = {});
   return function () {
     var app = connect();
-    if (typeof config !== 'object') {
-      config = {root: config};
+    if (typeof config === 'string') {
+      config = {root:[config]};
+    }
+    if (Array.isArray(config))
+    {
+      config = {root: config}; 
     }
     if (!config.root) {
       config.root = ['.'];
