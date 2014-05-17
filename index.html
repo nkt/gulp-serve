@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gulp-serve by nkt</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/nkt/gulp-serve">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/nkt/gulp-serve/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/nkt/gulp-serve/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Gulp-serve</h1>
+          <p>Provide connect-server functionality</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/nkt">nkt</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="gulp-serve" class="anchor" href="#gulp-serve"><span class="octicon octicon-link"></span></a>gulp-serve</h1>
+
+<p><img src="https://travis-ci.org/nkt/gulp-serve.svg?branch=master" alt="Build status"></p>
+
+<p>Provide connect-server functionality, using <a href="http://www.senchalabs.org/connect/static.html">connect.static</a></p>
+
+<h1>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h1>
+
+<p>Install with <a href="https://npmjs.org/">npm</a></p>
+
+<pre><code>npm i --save-dev gulp-serve
+</code></pre>
+
+<h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">serve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-serve'</span><span class="p">);</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'serve'</span><span class="p">,</span> <span class="nx">serve</span><span class="p">(</span><span class="s1">'public'</span><span class="p">));</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'serve-build'</span><span class="p">,</span> <span class="nx">serve</span><span class="p">([</span><span class="s1">'public'</span><span class="p">,</span> <span class="s1">'build'</span><span class="p">]));</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'serve-prod'</span><span class="p">,</span> <span class="nx">serve</span><span class="p">({</span>
+    <span class="nx">root</span><span class="o">:</span> <span class="p">[</span><span class="s1">'public'</span><span class="p">,</span> <span class="s1">'build'</span><span class="p">],</span>
+    <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="nx">middleware</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// custom optional middleware</span>
+    <span class="p">}</span>
+<span class="p">}));</span>
+</pre></div>
+
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p><a href="http://opensource.org/licenses/MIT">MIT</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
