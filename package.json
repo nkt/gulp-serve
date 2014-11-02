@@ -1,11 +1,11 @@
 {
   "name": "gulp-serve",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Serve your assets",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hell0w0rd/gulp-serve.git"
+    "url": "git://github.com/nkt/gulp-serve.git"
   },
   "keywords": [
     "gulpfriendly",
@@ -24,13 +24,13 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "gulp-util": "~2.2.12",
-    "connect": "~2.12.0"
+    "connect": "2.12.0",
+    "gulp-util": "2.2.20"
   },
   "devDependencies": {
-    "mocha": "~1.17.0",
-    "should": "~3.1.0",
-    "connect-livereload": "~0.3.2"
+    "connect-livereload": "0.3.2",
+    "mocha": "1.17.1",
+    "should": "3.1.4"
   },
   "scripts": {
     "test": "mocha"

@@ -9,9 +9,8 @@ module.exports = function (config) {
     if (typeof config === 'string') {
       config = {root:[config]};
     }
-    if (Array.isArray(config))
-    {
-      config = {root: config}; 
+    if (Array.isArray(config)) {
+      config = {root: config};
     }
     if (!config.root) {
       config.root = ['.'];
