@@ -49,5 +49,32 @@ describe('static webserver', function() {
         )
         .end();
     });
+
+    it('should allow using a specific hostname', function(done) {
+      var fixture = fs.readFileSync('./test/fixtures/raw-response.txt').toString();
+
+      serve({
+        hostname: '127.0.0.1',
+        root: './test/server/',
+        port: 3002,
+      })();
+
+      http
+        .request(
+          {
+            hostname: '127.0.0.1',
+            port: 3002,
+            method: 'GET',
+            headers: {'accept': 'text/html'}
+          },
+          function(res) {
+            res.on('data', function(body) {
+              body.toString().should.equal(fixture);
+              done();
+            });
+          }
+        )
+        .end();
+    });
   });
 });

@@ -36,7 +36,7 @@ module.exports = function (config) {
       config.port = 3000;
     }
 
-    http.createServer(app).listen(config.port, function () {
+    http.createServer(app).listen(config.port, config.hostname, function () {
       util.log(util.colors.bgGreen('Server started on ' + config.port + ' port'));
     });
   };
