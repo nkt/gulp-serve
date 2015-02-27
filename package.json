@@ -1,6 +1,6 @@
 {
   "name": "gulp-serve",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Serve your assets",
   "main": "index.js",
   "repository": {
