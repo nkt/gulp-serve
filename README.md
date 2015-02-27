@@ -1,6 +1,6 @@
 gulp-serve
 ==========
-![Build status](https://travis-ci.org/nkt/gulp-serve.svg?branch=master)
+[![Build Status](https://travis-ci.org/nkt/gulp-serve.svg?branch=master)](https://travis-ci.org/nkt/gulp-serve)
 
 Provide connect-server functionality, using [connect.static](http://www.senchalabs.org/connect/static.html)
 
