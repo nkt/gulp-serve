@@ -22,7 +22,7 @@
       <h1>
 <a id="gulp-serve" class="anchor" href="#gulp-serve" aria-hidden="true"><span class="octicon octicon-link"></span></a>gulp-serve</h1>
 
-<p><a href="https://travis-ci.org/nkt/gulp-serve"><img src="https://travis-ci.org/nkt/gulp-serve.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://circleci.com/gh/nkt/gulp-serve/tree/master"><img src="https://circleci.com/gh/nkt/gulp-serve/tree/master.svg?style=svg" alt="Circle CI"></a></p>
 
 <p>Provide connect-server functionality, using <a href="http://www.senchalabs.org/connect/static.html">connect.static</a></p>
 
@@ -43,17 +43,17 @@
 gulp.task(<span class="pl-s"><span class="pl-pds">'</span>serve<span class="pl-pds">'</span></span>, serve(<span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>));
 gulp.task(<span class="pl-s"><span class="pl-pds">'</span>serve-build<span class="pl-pds">'</span></span>, serve([<span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>]));
 gulp.task(<span class="pl-s"><span class="pl-pds">'</span>serve-prod<span class="pl-pds">'</span></span>, serve({
-    root<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>],
-    port<span class="pl-k">:</span> <span class="pl-c1">80</span>,
-    <span class="pl-en">middleware</span>: <span class="pl-k">function</span>(<span class="pl-smi">req</span>, <span class="pl-smi">res</span>) {
-        <span class="pl-c">// custom optional middleware</span>
-    }
+  root<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>],
+  port<span class="pl-k">:</span> <span class="pl-c1">80</span>,
+  <span class="pl-en">middleware</span>: <span class="pl-k">function</span>(<span class="pl-smi">req</span>, <span class="pl-smi">res</span>) {
+    <span class="pl-c">// custom optional middleware</span>
+  }
 }));</pre></div>
 
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
 
-<p><a href="http://opensource.org/licenses/MIT">MIT</a></p>
+<p><a href="LICENSE">MIT</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/nkt/gulp-serve">Gulp-serve</a> is maintained by <a href="https://github.com/nkt">nkt</a>.</span>
