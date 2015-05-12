@@ -1,6 +1,6 @@
 gulp-serve
 ==========
-[![Build Status](https://travis-ci.org/nkt/gulp-serve.svg?branch=master)](https://travis-ci.org/nkt/gulp-serve)
+[![Circle CI](https://circleci.com/gh/nkt/gulp-serve/tree/master.svg?style=svg)](https://circleci.com/gh/nkt/gulp-serve/tree/master)
 
 Provide connect-server functionality, using [connect.static](http://www.senchalabs.org/connect/static.html)
 
@@ -20,15 +20,15 @@ var serve = require('gulp-serve');
 gulp.task('serve', serve('public'));
 gulp.task('serve-build', serve(['public', 'build']));
 gulp.task('serve-prod', serve({
-    root: ['public', 'build'],
-    port: 80,
-    middleware: function(req, res) {
-        // custom optional middleware
-    }
+  root: ['public', 'build'],
+  port: 80,
+  middleware: function(req, res) {
+    // custom optional middleware
+  }
 }));
 ```
 
 License
 =====
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](LICENSE)
