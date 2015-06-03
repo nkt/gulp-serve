@@ -1,6 +1,7 @@
 gulp-serve
 ==========
 [![Circle CI](https://circleci.com/gh/nkt/gulp-serve/tree/master.svg?style=svg)](https://circleci.com/gh/nkt/gulp-serve/tree/master)
+[![Downloads](https://img.shields.io/npm/dm/gulp-serve.svg)](https://www.npmjs.com/package/gulp-serve)
 
 Provide connect-server functionality, using [connect.static](http://www.senchalabs.org/connect/static.html)
 
@@ -31,4 +32,4 @@ gulp.task('serve-prod', serve({
 License
 =====
 
-[MIT](LICENSE)
+[![MIT](https://img.shields.io/npm/l/express.svg)](LICENSE)
