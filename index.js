@@ -1,7 +1,7 @@
+var http = require('http');
 var util = require('gulp-util');
 var connect = require('connect');
 var serveStatic = require('serve-static');
-var http = require('http');
 
 module.exports = function (config) {
   config || (config = {});
@@ -47,8 +47,11 @@ module.exports = function (config) {
       config.port = 3000;
     }
 
-    http.createServer(app).listen(config.port, config.hostname, function () {
-      util.log(util.colors.blue('Server started at http://localhost:' + config.port));
+    var server = http.createServer(app).listen(config.port, config.hostname, function () {
+      var addr = server.address();
+      var address = addr.address;
+      var port = addr.port;
+      util.log(util.colors.blue('Server started at http://' + address + ':' + port));
     });
   };
 };
