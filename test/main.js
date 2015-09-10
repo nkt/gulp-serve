@@ -1,5 +1,6 @@
 var serve = require('../');
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var should = require('should');
 
@@ -66,6 +67,34 @@ describe('static webserver', function() {
             port: 3002,
             method: 'GET',
             headers: {'accept': 'text/html'}
+          },
+          function(res) {
+            res.on('data', function(body) {
+              body.toString().should.equal(fixture);
+              done();
+            });
+          }
+        )
+        .end();
+    });
+
+    it('should serve content over https', function(done) {
+      var fixture = fs.readFileSync('./test/fixtures/raw-response.txt').toString();
+
+      serve({
+        root: './test/server/',
+        port: 3003,
+        https: true
+      })();
+
+      https
+        .request(
+          {
+            hostname: 'localhost',
+            port: 3003,
+            method: 'GET',
+            headers: {'accept': 'text/html'},
+            rejectUnauthorized: false // trust self signed cert
           },
           function(res) {
             res.on('data', function(body) {
