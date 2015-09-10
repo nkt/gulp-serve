@@ -48,7 +48,7 @@ module.exports = function (config) {
     }
 
     http.createServer(app).listen(config.port, config.hostname, function () {
-      util.log(util.colors.bgGreen('Server started on ' + config.port + ' port'));
+      util.log(util.colors.blue('Server started at http://localhost:' + config.port));
     });
   };
 };
