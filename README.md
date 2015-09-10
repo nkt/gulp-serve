@@ -29,6 +29,43 @@ gulp.task('serve-prod', serve({
 }));
 ```
 
+With HTTPS enabled (using built-in key and certificate for `localhost`):
+```js
+var gulp = require('gulp');
+var serve = require('gulp-serve');
+
+gulp.task('serve', serve('public'));
+gulp.task('serve-build', serve(['public', 'build']));
+gulp.task('serve-prod', serve({
+  root: ['public', 'build'],
+  port: 443,
+  https: true,
+  middleware: function(req, res) {
+    // custom optional middleware
+  }
+}));
+```
+
+With HTTPS enabled (using self provided key and certificate):
+```js
+var gulp = require('gulp');
+var serve = require('gulp-serve');
+
+gulp.task('serve', serve('public'));
+gulp.task('serve-build', serve(['public', 'build']));
+gulp.task('serve-prod', serve({
+  root: ['public', 'build'],
+  port: 443,
+  https: {
+    key: 'path/to/cert.key',
+    cert: 'path/to/cert.pem'
+  },
+  middleware: function(req, res) {
+    // custom optional middleware
+  }
+}));
+```
+
 License
 =====
 
