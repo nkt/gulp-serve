@@ -1,5 +1,1 @@
-<html><body>test-string
-<script>//<![CDATA[
-document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
-//]]></script>
-</body></html>
+<html><body>test-string<script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script></body></html>
